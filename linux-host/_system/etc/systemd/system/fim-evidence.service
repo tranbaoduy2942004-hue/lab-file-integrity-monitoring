@@ -1,0 +1,13 @@
+[Unit]
+Description=File Integrity Evidence API
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+ExecStart=/usr/bin/python3 /usr/local/bin/fim_evidence.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
